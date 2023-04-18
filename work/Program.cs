@@ -10,22 +10,20 @@
 
 */
 
-string[] arr = { "Hello", "2", "world", ":-)"};
+string[] arr = { "Hello", "2", "world", ":-)" };
+string[] new_arr = new string[arr.Length];
+int count = 0;
 
-    string[] new_arr = new string[arr.Length];
-    int count = 0;
-    for (int i = 0; i < arr.Length; i++)
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i].Length < 4)
     {
-        if (arr[i].Length < 4)
-        {
-            new_arr[count]=arr[i];
-            count++;
-        }
+        new_arr[count] = arr[i];
+        count++;
     }
+}
 
-
-    for (int i = 0; i < new_arr.Length; i++)
-    {
-        Console.Write($"{new_arr[i]} ");
-    }
-    Console.WriteLine();
+for (int i = 0; i < new_arr.Length; i++)
+{
+    Console.Write($"{new_arr[i]} ");
+}
